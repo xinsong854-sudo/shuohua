@@ -11,6 +11,8 @@
   - 支持 echo 回包匹配
   - 支持超时处理
   - 支持连接状态查询
+  - 支持 `poke(event)` 戳一戳
+  - 支持 `setMsgEmojiLike(messageId, emojiId)` 给消息点 emoji
 
 - `package.json`
   - 最小依赖声明
@@ -48,7 +50,19 @@ await outbound.sendGroupMsg(groupId, '群消息');
 await outbound.sendPrivateMsg(userId, '私聊消息');
 ```
 
-5. 想看状态：
+5. 戳一戳当前发言者：
+
+```js
+await outbound.poke(event);
+```
+
+6. 给一条消息点 emoji：
+
+```js
+await outbound.setMsgEmojiLike(messageId, '66');
+```
+
+7. 想看状态：
 
 ```js
 console.log(outbound.getStatus());
@@ -78,3 +92,4 @@ OneBot v11 发送消息不是 HTTP 返回值，而是向反向 WebSocket 发 act
 ```bash
 npm install ws
 ```
+

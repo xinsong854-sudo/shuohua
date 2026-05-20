@@ -114,6 +114,32 @@ class OneBotOutbound {
     }, timeoutMs);
   }
 
+  // 戳一戳：群聊里戳某个群成员，通常戳当前发言者
+  poke(event, timeoutMs = 10000) {
+    if (!event || !event.message_type) throw new Error('invalid event');
+    if (event.message_type === 'group') {
+      return this.sendAction('group_poke', {
+        group_id: Number(event.group_id),
+        user_id: Number(event.user_id),
+      }, timeoutMs);
+    }
+    return this.sendAction('friend_poke', {
+      user_id: Number(event.user_id),
+    }, timeoutMs);
+  }
+
+  // 给一条已发送消息点 emoji / reaction
+  setMsgEmojiLike(messageId, emojiId = '66', timeoutMs = 10000) {
+    return this.sendAction('set_msg_emoji_like', {
+      message_id: messageId,
+      emoji_id: String(emojiId),
+    }, timeoutMs);
+  }
+
+  likeMessage(messageId, emojiId = '66', timeoutMs = 10000) {
+    return this.setMsgEmojiLike(messageId, emojiId, timeoutMs);
+  }
+
   reply(event, message, timeoutMs = 10000) {
     if (!event || !event.message_type) {
       throw new Error('invalid event');
@@ -140,3 +166,4 @@ class OneBotOutbound {
 module.exports = {
   OneBotOutbound,
 };
+
