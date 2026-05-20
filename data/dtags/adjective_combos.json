@@ -1,0 +1,78 @@
+{
+  "colors": {
+    "白色": ["white_background", "white_hair", "white_dress", "white_shirt", "white_theme"],
+    "黑色": ["black_hair", "black_dress", "black_background", "black_theme"],
+    "红色": ["red_eyes", "red_hair", "red_dress", "red_theme", "red_ribbon"],
+    "蓝色": ["blue_eyes", "blue_hair", "blue_dress", "blue_sky", "blue_theme"],
+    "粉色": ["pink_hair", "pink_eyes", "pink_dress", "pink_theme", "pink_ribbon"],
+    "紫色": ["purple_eyes", "purple_hair", "purple_dress", "purple_theme"],
+    "金色": ["blonde_hair", "gold_trim", "gold_eyes", "gold_theme"],
+    "银色": ["silver_hair", "silver_eyes", "silver_theme"],
+    "绿色": ["green_eyes", "green_hair", "green_dress", "green_theme"],
+    "透明": ["transparent_background", "see-through"]
+  },
+  "size": {
+    "大": ["large_breasts", "big_eyes", "large", "tall"],
+    "小": ["small_breasts", "petite", "flat_chest", "short"],
+    "高": ["tall", "tall_female"],
+    "矮": ["short", "petite", "loli"],
+    "巨乳": ["large_breasts", "huge_breasts", "breasts"],
+    "贫乳": ["flat_chest", "small_breasts"]
+  },
+  "texture": {
+    "柔软": ["soft_lighting", "fluffy", "soft_skin"],
+    "光滑": ["shiny", "shiny_skin", "wet", "oiled_skin"],
+    "粗糙": ["rough", "dirty", "scratches"],
+    "湿润": ["wet", "wet_clothes", "wet_skin", "rain", "sweat"],
+    "发光": ["glowing", "glowing_eyes", "glowing_hair", "glowing_skin", "sparkle"],
+    "透明": ["transparent", "see-through", "translucent"]
+  },
+  "lighting": {
+    "明亮": ["bright", "sunlight", "day", "soft_lighting"],
+    "昏暗": ["dark", "dim_lighting", "shadow", "night"],
+    "暖色": ["warm_lighting", "sunset", "golden_hour"],
+    "冷色": ["cold_lighting", "moonlight", "blue_lighting"],
+    "梦幻": ["dreamy", "bokeh", "lens_flare", "sparkle", "light_particles"],
+    "电影感": ["cinematic_lighting", "dramatic_lighting"]
+  },
+  "mood": {
+    "可爱": ["cute", "smile", "blush", "happy", "kawaii"],
+    "帅气": ["cool", "serious", "determined", "confident"],
+    "性感": ["sexy", "seductive", "mature", "alluring"],
+    "神秘": ["mysterious", "dark", "shadow", "silhouette"],
+    "忧伤": ["sad", "crying", "tears", "melancholy"],
+    "欢乐": ["happy", "laughing", "excited", "cheerful"],
+    "温柔": ["gentle", "soft", "tender", "peaceful"],
+    "冷酷": ["cold", "serious", "menacing", "intimidating"]
+  },
+  "time": {
+    "春天": ["spring", "cherry_blossoms", "sakura", "flower_field"],
+    "夏天": ["summer", "sunny", "beach", "ocean", "swimsuit"],
+    "秋天": ["autumn", "falling_leaves", "red_leaves", "sunset"],
+    "冬天": ["winter", "snow", "snowing", "cold", "snowy_scene"],
+    "早晨": ["morning", "dawn", "sunrise", "morning_sunlight"],
+    "黄昏": ["dusk", "sunset", "evening", "golden_hour"],
+    "夜晚": ["night", "night_sky", "starry_sky", "moon", "moonlight"]
+  },
+  "weather": {
+    "晴天": ["sunny", "sun", "clear_sky", "blue_sky"],
+    "雨天": ["rain", "rainy", "umbrella", "wet", "puddle"],
+    "雪天": ["snow", "snowing", "snowy", "winter"],
+    "多云": ["cloudy", "cloud", "overcast"],
+    "刮风": ["wind", "windy", "hair_blowing", "wind_lift"],
+    "雾天": ["fog", "foggy", "mist", "misty"]
+  },
+  "style": {
+    "日系": ["japanese_clothes", "kimono", "japanese_architecture", "sakura"],
+    "中式": ["chinese_clothes", "cheongsam", "chinese_architecture"],
+    "欧式": ["european_clothes", "gothic", "european_architecture"],
+    "哥特": ["gothic", "gothic_lolita", "dark", "cross"],
+    "赛博朋克": ["cyberpunk", "neon", "cityscape", "futuristic"],
+    "蒸汽朋克": ["steampunk", "goggles", "mechanical", "gears"],
+    "奇幻": ["fantasy", "magic", "dragon", "castle"],
+    "科幻": ["sci-fi", "space", "robot", "mecha"],
+    "复古": ["vintage", "retro", "old_fashioned"],
+    "水彩": ["watercolor", "painting", "artistic"],
+    "素描": ["sketch", "pencil", "monochrome"]
+  }
+}

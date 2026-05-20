@@ -1,7 +1,7 @@
 {
   "name": "shuohua-onebot-outbound",
   "version": "1.0.0",
-  "description": "Minimal OneBot v11 outbound send helper for QQ bot reply chain",
+  "description": "Minimal OneBot v11 outbound send helper and Danbooru tag search module for QQ bots",
   "main": "onebot-outbound.js",
   "type": "commonjs",
   "license": "MIT"

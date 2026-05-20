@@ -1,6 +1,9 @@
 # shuohua
 
-这个仓库只放**发消息相关**的最小补丁代码，方便把已有的 QQ 机器人后端补齐 outbound 链路。
+这个仓库放 QQ 机器人新人机可复用的最小功能模块：
+
+1. **OneBot outbound 发消息链路**
+2. **D站查词 / Danbooru 标签匹配能力**
 
 ## 内容
 
@@ -14,10 +17,55 @@
   - 支持 `poke(event)` 戳一戳
   - 支持 `setMsgEmojiLike(messageId, emojiId)` 给消息点 emoji
 
+- `dtag-search.js`
+  - 把用户输入的中文/自然语言拆成 D站 Danbooru 词条
+  - 支持 `/查词，描述` 命令
+  - 支持本地词库召回 + LLM 语义匹配
+  - 自动过滤常见废词/泛词
+  - 可输出一行可复制英文 tags
+
+- `data/dtags/`
+  - `tags.json`：D站词库
+  - `keyword_index.json`：分类索引
+  - `adjective_combos.json`：组合词/形容词词表
+
+- `DTAG_SEARCH.md`
+  - D站查词能力拆分说明、词库说明、对接示例
+
 - `package.json`
   - 最小依赖声明
 
-## 怎么接到现有后端里
+## D站查词怎么接
+
+详见：[DTAG_SEARCH.md](./DTAG_SEARCH.md)
+
+最小用法：
+
+```js
+const { createDtagSearch } = require('./dtag-search');
+
+const dtags = createDtagSearch({
+  callConfiguredLLM,
+  isLLMConfigured: () => true,
+  sendReply: (ws, event, text) => outbound.reply(event, text),
+  config: {
+    DTAGS_DIR: require('path').join(__dirname, 'data', 'dtags'),
+    DTAGS_ENABLED: true,
+  },
+});
+
+if (await dtags.handleDtagsCommand(ws, event, text)) return;
+```
+
+用户发送：
+
+```text
+/查词，蓝色眼睛白色长发
+```
+
+返回可复制的 Danbooru tags。
+
+## OneBot outbound 怎么接
 
 把这个模块引入到你现有的 3000 后端中，然后：
 
